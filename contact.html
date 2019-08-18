@@ -57,24 +57,34 @@
     </div>
 
 
-
     <div id="main-container" class="container">
         <div class="row">
             <section class="main-section">
-                <h1>About Me</h1>
-
-                <img src="assets/images/cat.jpg" class="rounded auth-image img-fluid col-xs-12 col-sm-6 float-left" alt="Responsive image">
-
-                <p class="col-12 col-sm-6 float-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum luctus felis, ac rhoncus nunc porttitor condimentum. Mauris sit amet dolor eu elit varius varius facilisis id arcu. Proin vel dui massa. Nunc rhoncus fringilla
-                    pharetra. Vestibulum bibendum consectetur euismod. Proin commodo purus vitae sollicitudin consectetur.</p>
-
-                <p class="col-12 float-left">Donec vehicula lacus at leo feugiat lacinia. In et ex ultrices, ultrices neque non, pretium odio. Nunc id eros iaculis, pulvinar quam eget, egestas mauris.</p>
-
-                <p class="col-12 float-left">Suspendisse dictum, arcu at convallis faucibus, quam sapien tincidunt nunc, sit amet egestas nibh tortor et mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <h1>Contact</h1>
+                <div class="col-xs-12 col-sm-6 float-left">
+                    <form id="contact-form">
+                        <ul>
+                            <li>
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Smith" required="required">
+                            </li>
+                            <li>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
+                            </li>
+                            <li>
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required="required"></textarea>
+                            </li>
+                        </ul>
+                        <input type="submit">
+                    </form>
 
             </section>
+            </div>
         </div>
     </div>
+
 
     <footer class="newfooter">
         <div class="col-12">
