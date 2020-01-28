@@ -46,39 +46,45 @@
 
     <div class="mx-6 rounded-lg lg:mx-32 xl:mx-64">
         <!-- <div class="row"> -->
-                <form id="contact-form" class="xl:mt-12 mt-6 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 paper">
-                    <div class="mb-4">
-                      <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                        Name
-                      </label>
-                      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="name">
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
-                        <textarea id="message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="message" required="required"
-                            class="paper"></textarea>
-                    </div>
-                    <div class="mb-6">
-                    <div class="flex items-center justify-between">
-                      <button id="bt1" class="primary-grad hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                        Submit
-                      </button>
-                    </div>
-                  </form>
+  
+        <form id="contact-form" class="xl:mt-12 mt-6 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 paper">
+            <strong><p class="mb-4">Contact me by email:</p></strong>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                    Name
+                </label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="name" type="text" placeholder="name">
             </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                <textarea id="message"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    name="message" required="required" class="paper"></textarea>
+            </div>
+            <div class="mb-6">
+                <div class="flex items-center justify-between">
+                    <button id="bt1"
+                        class="primary-grad hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button">
+                        Open Email Client
+                    </button>
+                </div>
+        </form>
+    </div>
 
-            <div class="xl:mt-12 mt-6 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 h-56">
-                <a href="https://www.linkedin.com/in/nanofuxion/" data-aos="fade-left"
-                    data-aos-anchor="#trigger-right">
-                    <img height="128" width="128" class="float-left px-1 pt-4 my-2 bg-transparent w-1/2 h-40"
-                        src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" />
-                </a>
-                <a href="https://github.com/nanofuxion" data-aos="fade-right" data-aos-anchor="#trigger-left">
-                    <img height="128" width="128" class="float-left px-1 pt-4 my-2 bg-transparent w-1/2 h-40"
-                        src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" />
-                </a>
-            </div>            
-        <!-- </div> -->
+    <div class="xl:mt-12 mt-6 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 h-56">
+        <a href="https://www.linkedin.com/in/nanofuxion/" data-aos="fade-left" data-aos-anchor="#trigger-right">
+            <img height="128" width="128" class="float-left px-1 pt-4 my-2 bg-transparent w-1/2 h-40"
+                src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" />
+        </a>
+        <a href="https://github.com/nanofuxion" data-aos="fade-right" data-aos-anchor="#trigger-left">
+            <img height="128" width="128" class="float-left px-1 pt-4 my-2 bg-transparent w-1/2 h-40"
+                src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" />
+        </a>
+    </div>
+    <!-- </div> -->
 
     </div>
 
@@ -86,7 +92,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         window.onload = function () {
-let blur = 0;
+            let blur = 0;
 
             document.getElementById('bt1').onclick = function (event) {
                 event.preventDefault();
@@ -95,18 +101,18 @@ let blur = 0;
             };
 
             document.getElementById('message').addEventListener('focus', (event) => {
-                blur += 1;  
+                blur += 1;
                 document.getElementById('message').setSelectionRange(-2, -2);
 
-});
+            });
 
-document.getElementById('name').addEventListener('input', (event) => {
-//   event.target.style.background = ''; 
- 
-if(blur == 0)
-document.getElementById('message').value = `Hi Jordan, my name is ${document.getElementById('name').value},\n `;    
+            document.getElementById('name').addEventListener('input', (event) => {
+                //   event.target.style.background = ''; 
 
-});
+                if (blur == 0)
+                    document.getElementById('message').value = `Hi Jordan, my name is ${document.getElementById('name').value},\n `;
+
+            });
 
 
         };
