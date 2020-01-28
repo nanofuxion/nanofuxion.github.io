@@ -1,3 +1,4 @@
+window.__forceSmoothScrollPolyfill__ = true;
 window.onload = runStuff;
 
 const myJson = new Request('https://gist.githubusercontent.com/nanofuxion/0287ade15065e416e4354ce39dd7cb05/raw/9963f7dd8ea28fbbbee5b909eac9e94a3a5aab1b/portfolio.json');
@@ -42,7 +43,6 @@ function PorjConst(pText, href, imgSrc) {
 
 function addProjects() {
     let projectsDiv = document.querySelector(".projectsDiv");
-
     fetch(myJson)
         .then(response => response.json())
         .then(data => {
@@ -52,29 +52,56 @@ function addProjects() {
                 console.log(data.projects[i]);
                 let newProj = PorjConst(`<strong class="whitespace-no-wrap">${element.name}</strong> </br> ${element.p}`, element.url, element.img);
                 projectsDiv.prepend(newProj);
-
                 afterAdd();
             }
-
-
-
         });
 
-    // const template  = 
-    // projectsDiv.innerHTML = "sucks there nothing to see here";
-    // if(project[1]) projectsDiv.innerHTML = project;
 }
 
 function runStuff() {
     addProjects();
-
+    contactFill();
+}
+window.onhashchange = function() { 
+    //scroll if still on main page 
+    afterAdd();
 }
 
 function afterAdd() {
     //check if #url is used and scroll page
-    if (window.location.href.indexOf("#portfolio") != -1)
+    if (window.location.href.indexOf("#0portfolio") != -1){
+        window.__forceSmoothScrollPolyfill__ = true;
         document.getElementById('portfolio').scrollIntoView({
             behavior: 'smooth'
         });
+        // document.getElementById('portfolio').focus;
+    }
 
+}
+
+function contactFill() {
+    let blur = 0;
+
+    //open email client with textarea value in body
+    document.getElementById('bt1').onclick = function (event) {
+        event.preventDefault();
+        window.location.href = ('mailto:ramnadroj@gmail.com?subject=' +
+            "Portfolio Page Contatct" + '&body=' + encodeURIComponent(document.getElementById('message').value.replace(/\n\r?/g, '<br />')));
+    };
+
+    //set cursor after prefill
+    document.getElementById('message').addEventListener('focus', (event) => {
+        if(document.getElementById('message').value == "") blur = 0;
+        else blur += 1;
+        setTimeout(function () { document.getElementById('message').setSelectionRange(-1, -1); }, 1);
+    });
+
+    //fill name in text area as typed in namebox unless taxt area is edited.
+    let nameEvent = (event) => {
+        if(document.getElementById('message').value == "") blur = 0;
+        if (blur == 0 && document.getElementById('name').value != "")
+        document.getElementById('message').value = `Hi Jordan, my name is ${document.getElementById('name').value[0].toUpperCase() + document.getElementById('name').value.slice(1)},\n\n`;
+    }
+    document.getElementById('name').addEventListener('input', nameEvent);
+    document.getElementById('name').addEventListener('focus', nameEvent);
 }
