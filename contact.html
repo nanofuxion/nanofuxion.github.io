@@ -4,25 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Nanofuxion Contact Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.4/tailwind.css"
+        integrity="sha256-hd4O5LnsypM7gax+P3h6W/z2C+0D3fMSlZOgmx89X8o=" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
@@ -34,79 +22,95 @@
 
 
 
-    <navbar class="col-xs-12">
+    <!-- navbar -->
+    <div class="mx-3 bg-blue-200 rounded-b-lg primary-grad">
 
 
-        <nav class="navbar navbar-light bg-light col-xs-12  mt-3 rounded-pill">
-            <a href="index.html"
-                class="d-flex col-xs-12 col-sm-5 navbar-brand justify-content-center fixbrand primary-grad rounded-pill">Jordan
-                Miller</a>
-            <ul class="d-flex nav justify-content-center justify-content-sm-end col-xs-12 col-sm-7">
-                <li class="nav-item">
-                    <a class="nav-link active primary-grad badge-pill px-5 pt-3 pb-3 mr-2" href="./index.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link primary-grad badge-pill px-5 pt-3 pb-3 mr-2" href="./index.html#portfolio">Portfolio</a>
-                </li>
-            </ul>
+        <div class="flex flex-wrap overflow-hidden">
+            <div class="my-2 w-full overflow-hidden md:w-1/3 py-2 md:py-6 text-center primary-grad rounded-lg">
+                <a href="./" class="font-bold">Jordan Miller</a>
+            </div>
 
+            <div class="my-1  w-full overflow-hidden md:w-1/3 py-2 md:py-6 text-center">
+                <a href="./#portfolio" class="lg:font-thin">Portfolio</a>
+            </div>
 
-        </nav>
-    </navbar>
-
-
-
-    <div class="container">
-        <div class="row">
-            <section class="mt-5 paper col-12">
-                <h1 class>Contact</h1>
-                <div class="col-xs-12 col-sm-6 float-left">
-                    <form id="contact-form" method="post" enctype="text/plain">
-                        <ul>
-                            <li>
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="John Smith"
-                                    required="required">
-                            </li>
-                            <li>
-                                <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control" name="email"
-                                    placeholder="example@gmail.com" required="required">
-                            </li>
-                            <li>
-                                <label for="message">Message</label>
-                                <textarea id="message" class="form-control" name="message" required="required"
-                                    class="paper"></textarea>
-                            </li>
-                        </ul>
-                        <input type="submit" class="primary-grad bt1 rounded-pill">
-                    </form>
-
-            </section>
+            <div class="my-1 w-full overflow-hidden md:w-1/3 py-2 md:py-6 text-center">
+                <a href="contact.html" class="lg:font-thin">Contact</a>
+            </div>
         </div>
     </div>
+
+
+
+
+    <div class="mx-6 rounded-lg lg:mx-32 xl:mx-64">
+        <!-- <div class="row"> -->
+                <form id="contact-form" class="xl:mt-12 mt-6 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 paper">
+                    <div class="mb-4">
+                      <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                        Name
+                      </label>
+                      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                        <textarea id="message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="message" required="required"
+                            class="paper"></textarea>
+                    </div>
+                    <div class="mb-6">
+                    <div class="flex items-center justify-between">
+                      <button id="bt1" class="primary-grad hover:bg-blue-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+            </div>
+
+            <div class="xl:mt-12 mt-6 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 h-56">
+                <a href="https://www.linkedin.com/in/nanofuxion/" data-aos="fade-left"
+                    data-aos-anchor="#trigger-right">
+                    <img height="128" width="128" class="float-left px-1 pt-4 my-2 bg-transparent w-1/2 h-40"
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" />
+                </a>
+                <a href="https://github.com/nanofuxion" data-aos="fade-right" data-aos-anchor="#trigger-left">
+                    <img height="128" width="128" class="float-left px-1 pt-4 my-2 bg-transparent w-1/2 h-40"
+                        src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" />
+                </a>
+            </div>            
+        <!-- </div> -->
+
     </div>
 
 
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1200
-            });
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        window.onload = function () {
+let blur = 0;
 
-            $(document).ready(function() {
-    $('.bt1').click(function(event) {
-        event.preventDefault();
-        $('contact-form').attr('action',
-                       'mailto:ramnadroj@gmail.com?subject=' +
-                       "PortfolioContatct" + '&body=' + $('#message').val());
+            document.getElementById('bt1').onclick = function (event) {
+                event.preventDefault();
+                window.location.href = ('mailto:ramnadroj@gmail.com?subject=' +
+                    "Portfolio Page Contatct" + '&body=' + encodeURIComponent(document.getElementById('message').value.replace(/\n\r?/g, '<br />')));
+            };
 
-        window.location.href = ('mailto:ramnadroj@gmail.com?subject=' +
-                       "Portfolio Page Contatct" + '&body=' + $('#message').val())
-        //$('#contact-form').submit();
-    });
+            document.getElementById('message').addEventListener('focus', (event) => {
+                blur += 1;  
+                document.getElementById('message').setSelectionRange(-2, -2);
+
 });
-        </script>
+
+document.getElementById('name').addEventListener('input', (event) => {
+//   event.target.style.background = ''; 
+ 
+if(blur == 0)
+document.getElementById('message').value = `Hi Jordan, my name is ${document.getElementById('name').value},\n `;    
+
+});
+
+
+        };
+    </script>
 </body>
 
 </html>

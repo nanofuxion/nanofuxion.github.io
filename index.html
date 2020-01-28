@@ -4,275 +4,107 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Nanofuxion Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.4/tailwind.css"
+        integrity="sha256-hd4O5LnsypM7gax+P3h6W/z2C+0D3fMSlZOgmx89X8o=" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js"></script>
 </head>
 
-<body>
+<body class="mx-auto">
+
+    <!-- navbar -->
+    <div class="mx-3 bg-blue-200 rounded-b-lg primary-grad">
 
 
+        <div class="flex flex-wrap overflow-hidden">
+            <div class="my-2 w-full overflow-hidden md:w-1/3 py-2 md:py-6 text-center primary-grad rounded-lg">
+                <a href="./" class="font-bold">Jordan Miller</a>
+            </div>
 
+            <div class="my-1  w-full overflow-hidden md:w-1/3 py-2 md:py-6 text-center">
+                <a href="#portfolio" class="lg:font-thin">Portfolio</a>
+            </div>
 
-
-
-
-    <navbar class="col-xs-12">
-
-
-        <nav class="navbar navbar-light bg-light col-xs-12  mt-3 rounded-pill">
-            <a href="index.html"
-                class="d-flex col-xs-12 col-sm-5 navbar-brand justify-content-center fixbrand primary-grad rounded-pill">Jordan
-                Miller</a>
-            <ul class="d-flex nav justify-content-center justify-content-sm-end col-xs-12 col-sm-7">
-                <li class="nav-item">
-                    <a class="nav-link primary-grad badge-pill px-5 pt-3 pb-3 mr-2" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link primary-grad badge-pill px-5 pt-3 pb-3 mr-2" href="contact.html">Contact</a>
-                </li>
-            </ul>
-
-
-        </nav>
-    </navbar>
-
-
-
-
-    <div class="container">
-        <div class="row">
-            <section class="mt-5 paper col-12">
-                <h1 class="text-center">About Me</h1>
-
-                <img src="https://via.placeholder.com/640" class="auth-image img-fluid float-left badge-pill"
-                    alt="portait photo" height="256" width="256">
-
-                <p class="col-12 float-left">Not sure what to put here yet, leaving temp text for now!</p>
-
-                <p class="col-12 float-left">Will update with some guidance from career advisor.</p>
-
-                <p class="col-12 float-left">...</p>
-
-            </section>
+            <div class="my-1 w-full overflow-hidden md:w-1/3 py-2 md:py-6 text-center">
+                <a href="contact.html" class="lg:font-thin">Contact</a>
+            </div>
         </div>
     </div>
 
-    <a href="https://linkedin.com" data-aos="fade-left" data-aos-anchor="#trigger-right">
+
+
+    <!-- Summary -->
+    <div class="mx-6 rounded-lg lg:mx-32 xl:mx-64">
+
+        <section class="mt-5 paper rounded-t-lg md:mx-16 mb-16">
+            <h1 class="text-center pt-6 mb-4">About Me</h1>
+            <div class="flex flex-wrap -mx-1 overflow-hidden block md:hidden xl:block">
+                <div class="my-1 px-1 w-full overflow-hidden sm:w-1/2 xl:container xl:mx-auto">
+                    <!--  -->
+                    <img src="https://via.placeholder.com/640" class="px-3 mx-auto xl:mb-4 xl:h-64" alt="portait photo">
+                </div>
+                <div class="my-1 px-1 w-full overflow-hidden sm:w-1/2 xl:w-full">
+                    <!--  -->
+                    <p class="px-3 xl:px-4 pb-4 xl:mx-24">
+                        Full Stack Web Developer with a background in IT Networking configuration and troubleshooting. 
+                        Graduate of the University of Miami Coding BootCamp and proficient in JavaScript, HTML, CSS, MongoDB, Express, React.js, and Node.js and Prior experience in game development with the Unity Game Engine. 
+                        While attending the University of Miami Coding Boot Camp entered the 2019 IBM call for code competition, creating a Disaster Relief App with fellow class members.
+                    </p>
+                </div>
+            </div>
+            <div class="px-16 py-8 md:block hidden xl:hidden">
+                <img class="float-left mx-2 my-2 h-32" src="https://via.placeholder.com/640">
+                <p class="px-3">
+                    Full Stack Web Developer with a background in IT Networking configuration and troubleshooting. 
+                    Graduate of the University of Miami Coding BootCamp and proficient in JavaScript, HTML, CSS, MongoDB, Express, React.js, and Node.js and Prior experience in game development with the Unity Game Engine. 
+                    While attending the University of Miami Coding Boot Camp entered the 2019 IBM call for code competition, creating a Disaster Relief App with fellow class members.
+                </p>
+            </div>
+
+        </section>
+    </div><!-- summary ends here -->
+
+
+
+    <!-- projects below -->
+
+    <div id="portfolio" class="mx-6 rounded-lg lg:mx-32 xl:mx-64">
+        <div class="flex flex-wrap -mx-2 overflow-hidden projectsDiv">
+
+            <div class="flex flex-wrap my-2 px-2 w-full overflow-hidden md:w-1/3">
+                <!-- Column Content -->
+                <div class="bg-gray-200 p-4 paper rounded-t-lg mb-6 h-56">
+                    <a href="https://www.linkedin.com/in/nanofuxion/" data-aos="fade-left"
+                        data-aos-anchor="#trigger-right">
+                        <img height="128" width="128" class="float-left px-1 pt-4 my-2 bg-transparent w-1/2"
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" />
+                    </a>
+                    <a href="https://github.com/nanofuxion" data-aos="fade-right" data-aos-anchor="#trigger-left">
+                        <img height="128" width="128" class="float-left px-1 pt-4 my-2 bg-transparent w-1/2"
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" />
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- <a href="https://linkedin.com" data-aos="fade-left" data-aos-anchor="#trigger-right">
         <img height="128" width="128" class="ml-2  item--primary"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" />
     </a>
     <a href="https://github.com/nanofuxion" data-aos="fade-right" data-aos-anchor="#trigger-left">
         <img height="128" width="128" class="ml-2  item--secondary"
             src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" />
-    </a>
-
-    <div class="container" id="portfolio">
-        <div class="row">
-
-
-            <!-- 1 -->
-
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp paper col-12 mt-5" data-aos="fade-up">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">PokéTourney</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    A quick and easy way for players to set up a tournament roster with a Pokemon of their choosing. It
-                    visually helps players organize and keep track of participants and matches.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                        href="https://vpdsgnz.github.io/project1/">
-                        View Page
-                    </a>
-                </div>
-                <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">share</i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- 2 -->
-
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp paper col-12 mt-5" data-aos="fade-up">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Disaster Relief App</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    An app is designed to aid rescuers in locating and accessing the need of civilians in during or
-                    after a Disaster.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                        href="https://project2fam.herokuapp.com/">
-                        View Page
-                    </a>
-                </div>
-                <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">share</i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- 3 -->
-
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp paper col-12 mt-5" id="trigger-left" data-aos="fade-up">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Rock Paper Scissors: Multiplayer</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Online Rock Paper Scissors using firebase.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                        href="https://nanofuxion.github.io/RPS/">
-                        View Page
-                    </a>
-                </div>
-                <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">share</i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- 4 -->
-
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp paper col-12 mt-5" data-aos="fade-up">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Coming Soon...</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Coming Soon...
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        Get Started
-                    </a>
-                </div>
-                <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">share</i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- 5 -->
-
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp paper col-12 mt-5" data-aos="fade-up">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Coming Soon...</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Coming Soon...
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        Get Started
-                    </a>
-                </div>
-                <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">share</i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- 6 -->
-
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp paper col-12 mt-5" data-aos="fade-up">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Coming Soon...</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Coming Soon...
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        Get Started
-                    </a>
-                </div>
-                <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">share</i>
-                    </button>
-                </div>
-            </div>
-
-
-            <!-- 7 -->
-
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp paper col-12 mt-5" id="trigger-right"
-                data-aos="fade-up">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Coming Soon...</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Coming Soon...
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        Get Started
-                    </a>
-                </div>
-                <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">share</i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- 8 -->
-
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp paper col-12 mt-5" data-aos="fade-up">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Coming Soon...</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    Coming Soon...
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        Get Started
-                    </a>
-                </div>
-                <div class="mdl-card__menu">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                        <i class="material-icons">share</i>
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <footer class="newfooter">
-        <div class="col-12">
-            Copyright &copy;
-        </div>
-    </footer>
+    </a> -->
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
