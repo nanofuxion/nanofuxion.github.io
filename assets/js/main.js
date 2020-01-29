@@ -98,6 +98,7 @@ function contactFill() {
 
     //fill name in text area as typed in namebox unless taxt area is edited.
     let nameEvent = (event) => {
+        if(document.getElementById('name').value == "" && blur == 0) setTimeout(function () { document.getElementById('message').value = ""; }, 1);
         if(document.getElementById('message').value == "") blur = 0;
         if (blur == 0 && document.getElementById('name').value != "")
         document.getElementById('message').value = `Hi Jordan, my name is ${document.getElementById('name').value[0].toUpperCase() + document.getElementById('name').value.slice(1)},\n\n`;
