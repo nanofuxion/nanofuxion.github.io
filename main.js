@@ -1,0 +1,1 @@
+$('#chart').load('http://sourcerer.io/nanofuxion #awesome-chart-section');
